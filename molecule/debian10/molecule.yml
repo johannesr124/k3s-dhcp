@@ -25,5 +25,5 @@ provisioner:
   name: ansible
   log: true
 verifier:
-  name: testinfra
-#  name: ansible
+#  name: testinfra
+  name: ansible

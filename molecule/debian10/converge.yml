@@ -12,10 +12,10 @@
         name: "network-manager"
         state: "started"
         enabled: true
-  tasks:
-    - name: "Include dhcp"
-      include_role:
-        name: "dhcp"
+  # tasks:
+  #   - name: "Include dhcp"
+  #     include_role:
+  #       name: "dhcp"
   vars:
     dhcp_global_default_lease_time: 28800   # 8hrs
     dhcp_global_max_lease_time: 43200       # 12 hrs
