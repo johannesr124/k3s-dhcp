@@ -1,0 +1,19 @@
+version: "~> 1.0"
+os: linux
+dist: buster
+language: python
+python:
+- '3.6'
+services:
+- docker
+notifications:
+  email:
+    on_success: never
+    on_failure: never
+  slack:
+    secure: RX3slHNsjUKZW1my12oqfd1E9SnvFXjCAgNpySHzqSI9ivTEMfz+BxA8RPLt6nCmITsPw8dWFE/oHSL9j5DBt2IfZ+BZSgiaQwZEopAz1deocoK3Ir28W3VoEIBMeudMq2aFFFck4+BZZSv0jmEf/cNhjnLdySfCWCbSyM5WjQH0b/3BtCWwg9tyXb5RH+NRibbdeAGk+QQz/a3Ppdmqzlwcjv5jMkaAVtx8/hEXwLEAVIrAX1HvjZy3bj62j5wO000tqHh57D3a/XkRjdfgxduRF/j4e1vgIgpjb0SYbY4iKGSGLXkH7p1KKowEuFZvjOYu9ekEC7nI/rjwH4dvjZz/7Fs1cpEo6Y0JmjdbUkUP33Rbrt/X5BRIiS/dXnCRbSrqTpi0CGbDPYJPhtsskDEi8sfYmED/CmY0SKUTN8cFKG2H7Syv5/FYeC8edohoXbSYFQyTuVgm4TZci75RstFFeWGoH/T2eQK4dy/TX5FciHacvkmTr5Aiu6N8QSxfaffB/o4a0vq45byAUFIoq17AAbyqCpJZyj3R+OL5TT5j3hyUX9YepkgUd144eYSKekiuKF0Na/8gZCekGUL9fRXPXmoZ8ohG26EU7ifxbZqRlP394jBz97Xv2EWv+pFCiuUMHkpKYKtHULvaz7kHJFRen9KbkD3Tv37qzICXbX8=
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+install:
+- pip install -r requirements.txt
+script:
+- molecule test --all
