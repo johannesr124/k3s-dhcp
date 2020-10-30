@@ -294,6 +294,7 @@ BSD
 ## Contributing
 
 Issues, feature requests, ideas are appreciated and can be posted in the Issues section. Pull requests are also very welcome. Preferably, create a topic branch and when submitting, squash your commits into one (with a descriptive message).
+test
 
 ### Contributors
 
